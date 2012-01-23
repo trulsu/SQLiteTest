@@ -1,0 +1,10 @@
+C:\source\Prototypes\SqLiteTest\SqLiteTest\bin\Debug\TestDB.db3
+C:\source\Prototypes\SqLiteTest\SqLiteTest\bin\Debug\SqLiteTest.exe
+C:\source\Prototypes\SqLiteTest\SqLiteTest\bin\Debug\SqLiteTest.pdb
+C:\source\Prototypes\SqLiteTest\SqLiteTest\bin\Debug\System.Data.SQLite.dll
+C:\source\Prototypes\SqLiteTest\SqLiteTest\bin\Debug\System.Data.SQLite.Linq.dll
+C:\source\Prototypes\SqLiteTest\SqLiteTest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\source\Prototypes\SqLiteTest\SqLiteTest\obj\x86\Debug\SqLiteTest.exe
+C:\source\Prototypes\SqLiteTest\SqLiteTest\obj\x86\Debug\SqLiteTest.pdb
+C:\source\Prototypes\SqLiteTest\SqLiteTest\bin\Debug\System.Data.SQLite.pdb
+C:\source\Prototypes\SqLiteTest\SqLiteTest\bin\Debug\System.Data.SQLite.Linq.pdb

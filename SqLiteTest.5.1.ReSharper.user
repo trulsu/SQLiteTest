@@ -1,0 +1,144 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Schema.sqlite" caret="164" fromTop="6" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="2194" fromTop="30" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:SqLite.cs" caret="740" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:SqLite.cs" caret="1426" fromTop="11" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:SqLite.cs" caret="1409" fromTop="31" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Schema.sqlite" caret="518" fromTop="11" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:SqLite.cs" caret="46" fromTop="1" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Schema.sqlite" caret="507" fromTop="10" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Schema.sqlite" caret="462" fromTop="10" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Schema.sqlite" caret="20" fromTop="0" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:SqLite.cs" caret="751" fromTop="16" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="2614" fromTop="22" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="3130" fromTop="33" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:SqLite.cs" caret="519" fromTop="9" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:SqLite.cs" caret="925" fromTop="21" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="770" fromTop="10" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="329" fromTop="10" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:SqLite.cs" caret="1407" fromTop="32" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="48" fromTop="1" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="968" fromTop="23" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:SqLite.cs" caret="1142" fromTop="20" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="1286" fromTop="24" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="2253" fromTop="25" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="2456" fromTop="30" />
+      <File id="8C41B63B-719B-4F07-9454-EB37CDDC7BA9/f:Program.cs" caret="2062" fromTop="23" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="7" />
+      <Item value="void" priority="4" />
+      <Item value="string" priority="2" />
+      <Item value="var" priority="1" />
+      <Item value="new" priority="7" />
+      <Item value="using" priority="2" />
+      <Item value="DbLinq" priority="1" />
+      <Item value="Sqlite" priority="0" />
+      <Item value="Guid`0" priority="1" />
+      <Item value="class" priority="0" />
+      <Item value="System" priority="3" />
+      <Item value="Data" priority="3" />
+      <Item value="SqLiteDataContext`0" priority="1" />
+      <Item value="base" priority="0" />
+      <Item value="private" priority="4" />
+      <Item value="static" priority="3" />
+      <Item value="Linq" priority="2" />
+      <Item value="Mapping" priority="1" />
+      <Item value="MappingSource`0" priority="0" />
+      <Item value="Table" priority="0" />
+      <Item value="return" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="Name" priority="1" />
+      <Item value="double" priority="0" />
+      <Item value="SqLite`0" priority="11" />
+      <Item value="connection" priority="9" />
+      <Item value="foreach" priority="1" />
+      <Item value="in" priority="1" />
+      <Item value="Console`0" priority="11" />
+      <Item value="String`0" priority="1" />
+      <Item value="entry" priority="3" />
+      <Item value="ObjCommand" priority="1" />
+      <Item value="while" priority="1" />
+      <Item value="reader" priority="3" />
+      <Item value="ObjConnection" priority="0" />
+      <Item value="t" priority="5" />
+      <Item value="CanBeNull" priority="0" />
+      <Item value="Guid" priority="0" />
+      <Item value="first" priority="0" />
+      <Item value="List" priority="2" />
+      <Item value="List&lt;SqLite&gt;" priority="1" />
+      <Item value="SqLite" priority="1" />
+      <Item value="Id" priority="0" />
+      <Item value="Value" priority="0" />
+      <Item value="list" priority="3" />
+      <Item value="n" priority="0" />
+      <Item value="firstOrDefaultOnName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SqLiteTest.SqLiteDataContext">
+      <Item value="GetTable`0" priority="0" />
+      <Item value="SqLites" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Table`1">
+      <Item value="All`1" priority="0" />
+      <Item value="ToList`1" priority="1" />
+      <Item value="Where`1" priority="1" />
+      <Item value="FirstOrDefault`1" priority="1" />
+      <Item value="SingleOrDefault`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="9" />
+      <Item value="ReadLine`0" priority="0" />
+      <Item value="Write`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SqLiteTest.SqLite">
+      <Item value="Id" priority="0" />
+      <Item value="Name" priority="7" />
+      <Item value="RowId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SQLite.SQLiteCommand">
+      <Item value="ExecuteReader`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SQLite.SQLiteDataReader">
+      <Item value="Read`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SQLite.SQLiteConnection">
+      <Item value="Open`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="FirstOrDefault`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="2" />
+      <Item value="FirstOrDefault`1" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
