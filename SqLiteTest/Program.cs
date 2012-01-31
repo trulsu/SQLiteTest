@@ -13,8 +13,10 @@ namespace SqLiteTest
         /// </summary>
         static void Main()
         {
-            using(var connection = new SqLiteDataContext()) {
+            using (var connection = new TestDBConnection()) {
                 PersonTest(connection);
+            }
+            using (var connection = new TestDBConnection()) {
                 SqLitesTest(connection);
             }
             Console.WriteLine("----- Press enter to continue -----");
@@ -28,53 +30,53 @@ namespace SqLiteTest
             Console.WriteLine();
         }
 
-        private static void SqLitesTest(SqLiteDataContext connection)
+        private static void SqLitesTest(TestDBConnection connection)
         {
-            List<SqLite> result = connection.SqLites.ToList();
+            List<SqLite> result = connection.SqLite.ToList();
             Console.WriteLine("All entries:");
             foreach (SqLite entry in result) {
-                Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}, Row Id:{3}", entry.Id, entry.Name, entry.Value, entry.RowId));
+                Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", entry.Id, entry.Name, entry.Value));
             }
 
             Console.WriteLine("Single entry:");
-            SqLite single = connection.SqLites.Single(t => t.Id == new Guid("5641615F-B658-4572-A783-CF8C9217BA51"));
+            SqLite single = connection.SqLite.Single(t => t.Id == new Guid("5641615F-B658-4572-A783-CF8C9217BA51"));
             Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", single.Id, single.Name, single.Value));
 
             Console.WriteLine("FirstOrDefault:");
-            SqLite firstOrDefault = connection.SqLites.FirstOrDefault(t => t.Id == new Guid("5641615F-B658-4572-A783-CF8C9217BA51"));
+            SqLite firstOrDefault = connection.SqLite.FirstOrDefault(t => t.Id == new Guid("5641615F-B658-4572-A783-CF8C9217BA51"));
             Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", firstOrDefault.Id, firstOrDefault.Name, firstOrDefault.Value));
 
             Console.WriteLine("SingleOrDefault:");
-            SqLite singleOrDefault = connection.SqLites.SingleOrDefault(t => t.Name == "Second");
+            SqLite singleOrDefault = connection.SqLite.SingleOrDefault(t => t.Name == "Second");
             Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", singleOrDefault.Id, singleOrDefault.Name, singleOrDefault.Value));
 
-            ExtraTest(connection.SqLites.ToList());
+            ExtraTest(connection.SqLite.ToList());
 
-            SqLite firstOrDefaultOnName = connection.SqLites.FirstOrDefault(n => n.Name == "First"); // This crashes!
+            SqLite firstOrDefaultOnName = connection.SqLite.FirstOrDefault(n => n.Name == "First"); // This crashes!
             Console.WriteLine("FirstOrDefaultOnName:" + firstOrDefaultOnName.Name);
         }
 
-        private static void PersonTest(SqLiteDataContext connection)
+        private static void PersonTest(TestDBConnection connection)
         {
-            List<Person> result = connection.Persons.ToList();
-            Console.WriteLine("All entries:");
-            foreach (Person entry in result) {
-                Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", entry.Id, entry.Name, entry.Age));
-            }
+            //List<Person> result = connection.Person.ToList();
+            //Console.WriteLine("All entries:");
+            //foreach (Person entry in result) {
+            //    Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", entry.Id, entry.Name, entry.Age));
+            //}
 
             Console.WriteLine("Single entry:");
-            Person single = connection.Persons.Single(t => t.Id == 1);
+            Person single = connection.Person.Single(t => t.Id == 1);
             Console.WriteLine(String.Format("Id:{0}, Name:{1}, Age:{2}", single.Id, single.Name, single.Age));
 
             Console.WriteLine("FirstOrDefault:");
-            Person firstOrDefault = connection.Persons.FirstOrDefault(t => t.Id == 1);
+            Person firstOrDefault = connection.Person.FirstOrDefault(t => t.Id == 1);
             Console.WriteLine(String.Format("Id:{0}, Name:{1}, Age:{2}", firstOrDefault.Id, firstOrDefault.Name, firstOrDefault.Age));
 
             Console.WriteLine("SingleOrDefault:");
-            Person singleOrDefault = connection.Persons.SingleOrDefault(t => t.Name == "Pete");
+            Person singleOrDefault = connection.Person.SingleOrDefault(t => t.Name == "Pete");
             Console.WriteLine(String.Format("Id:{0}, Name:{1}, Age:{2}", singleOrDefault.Id, singleOrDefault.Name, singleOrDefault.Age));
 
-            Person firstOrDefaultOnName = connection.Persons.FirstOrDefault(person => person.Name == "Bob"); // This crashes!
+            Person firstOrDefaultOnName = connection.Person.FirstOrDefault(person => person.Name == "Bob"); // This crashes!
             Console.WriteLine("FirstOrDefaultOnName:" + firstOrDefaultOnName.Name);
         }
     }
