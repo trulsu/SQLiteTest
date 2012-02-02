@@ -1,4 +1,0 @@
-<Modules>
-  <Module PersistentId="8C41B63B-719B-4F07-9454-EB37CDDC7BA9" ModuleId="SqLiteTest" />
-  <Module PersistentId="System.Data.SQLite, Version=1.0.77.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" ModuleId="System.Data.SQLite" />
-</Modules>
