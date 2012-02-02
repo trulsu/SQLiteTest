@@ -35,41 +35,25 @@ namespace SqLiteTest
             List<SqLite> result = connection.SqLite.ToList();
             Console.WriteLine("All entries:");
             foreach (SqLite entry in result) {
-                Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", entry.Id, entry.Name, entry.Value));
+                Console.WriteLine(String.Format("  Id:{0}, Name:{1}, Value:{2}", entry.Id, entry.Name, entry.Value));
             }
 
-            Guid firstId = new Guid("5641615F-B658-4572-A783-CF8C9217BA51");
+            Guid firstId = new Guid("5641615f-b658-4572-a783-cf8c9217ba51");
 
-            Console.Write("First[Id]: ");
             SqLite first = connection.SqLite.First(delegate(SqLite s) { return s.Id == firstId; });
-            Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", first.Id, first.Name, first.Value));
+            WriteSqLiteResult("First[Id]: ", first);
 
-            Console.Write("*** FirstOrDefault[Id]:\t");
             SqLite firstOrDefault = connection.SqLite.FirstOrDefault(delegate(SqLite s) { return s.Id == firstId; });
             //SqLite firstOrDefault = connection.SqLite.FirstOrDefault(s => s.Id == firstId ); // This fails!
-            if(firstOrDefault != null) {
-                Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", firstOrDefault.Id, firstOrDefault.Name, firstOrDefault.Value));
-            } else {
-                Console.WriteLine("--- None ---");
-            }
+            WriteSqLiteResult("FirstOrDefault[Id]:", firstOrDefault);
 
-            Console.Write("SingleOrDefault[Name]:\t");
             SqLite singleOrDefault = connection.SqLite.SingleOrDefault(t => t.Name == "Second");
-            if (singleOrDefault != null) {
-                Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", singleOrDefault.Id, singleOrDefault.Name, singleOrDefault.Value));
-            } else {
-                Console.WriteLine("--- None ---");
-            }
+            WriteSqLiteResult("SingleOrDefault[Name]: ", singleOrDefault);
 
             ExtraTest(connection.SqLite.ToList());
 
-            Console.Write("FirstOrDefault[Name]:\t");
             SqLite firstOrDefaultOnName = connection.SqLite.FirstOrDefault(n => n.Name == "First");
-            if (firstOrDefaultOnName != null) {
-                Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", firstOrDefaultOnName.Id, firstOrDefaultOnName.Name, firstOrDefaultOnName.Value));
-            } else {
-                Console.WriteLine("--- None ---");
-            }
+            WriteSqLiteResult("FirstOrDefault[Name]: ", firstOrDefaultOnName);
         }
 
         private static void PersonTest(TestDBConnection connection)
@@ -78,23 +62,32 @@ namespace SqLiteTest
             List<Person> result = connection.Person.ToList();
             Console.WriteLine("All entries:");
             foreach (Person entry in result) {
-                Console.WriteLine(String.Format("Id:{0}, Name:{1}, Value:{2}", entry.Id, entry.Name, entry.Age));
+                WritePersonResult("  Person:", entry);
             }
 
-            Console.Write("Single:\t");
             Person single = connection.Person.Single(t => t.Id == 1);
-            Console.WriteLine(String.Format("Id:{0}, Name:{1}, Age:{2}", single.Id, single.Name, single.Age));
+            WritePersonResult("Single: \t", single);
 
-            Console.Write("FirstOrDefault:\t");
             Person firstOrDefault = connection.Person.FirstOrDefault(t => t.Id == 1);
-            Console.WriteLine(String.Format("Id:{0}, Name:{1}, Age:{2}", firstOrDefault.Id, firstOrDefault.Name, firstOrDefault.Age));
+            WritePersonResult("FirstOrDefault: ", firstOrDefault);
 
-            Console.Write("SingleOrDefault:\t");
             Person singleOrDefault = connection.Person.SingleOrDefault(t => t.Name == "Pete");
-            Console.WriteLine(String.Format("Id:{0}, Name:{1}, Age:{2}", singleOrDefault.Id, singleOrDefault.Name, singleOrDefault.Age));
+            WritePersonResult("SingleOrDefault: ", singleOrDefault);
 
             Person firstOrDefaultOnName = connection.Person.FirstOrDefault(person => person.Name == "Bob"); // This crashes!
-            Console.WriteLine("FirstOrDefaultOnName:\t" + firstOrDefaultOnName.Name);
+            WritePersonResult("FirstOrDefaultOnName: ", firstOrDefaultOnName);
+        }
+
+        private static void WritePersonResult(string header, Person person)
+        {
+            Console.Write(header);
+            Console.WriteLine(person != null ? String.Format("Id:{0}, Name:{1}, Age:{2}", person.Id, person.Name, person.Age) : "----- None -----");
+        }
+
+        private static void WriteSqLiteResult(string header, SqLite result)
+        {
+            Console.Write(header);
+            Console.WriteLine(result != null ? String.Format("Id:{0}, Name:{1}, Value:{2}", result.Id, result.Name, result.Value) : "----- None -----");
         }
     }
 }
